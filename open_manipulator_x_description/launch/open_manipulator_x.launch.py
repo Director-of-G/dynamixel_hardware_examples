@@ -47,21 +47,21 @@ def generate_launch_description():
 
         Node(
             package="controller_manager",
-            executable="spawner",
+            executable="spawner.py",
             arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
             output="screen",
         ),
 
         Node(
             package="controller_manager",
-            executable="spawner",
+            executable="spawner.py",
             arguments=["velocity_controller", "-c", "/controller_manager"],
             output="screen",
         ),
 
         Node(
             package="controller_manager",
-            executable="spawner",
+            executable="spawner.py",
             arguments=["joint_trajectory_controller", "-c", "/controller_manager"],
             output="screen",
         ),
